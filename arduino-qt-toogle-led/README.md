@@ -30,7 +30,7 @@ Step 1: Create arduino sketch template
 In the console, go to the folder containing this project and execute the following
 command:
 
-    lantz ino new run:TemperatureSensor
+    lantz ino new run:LEDDriver
     
 This will generate an arduino sketch template for the class `LEDDriver`
 located in the `run` module. You will find it in the LEDDriver just created directory.
@@ -55,20 +55,32 @@ You will find the following functions:
 
 In order to get the onboard LED turned on an off, we need to modify the 
 `inodriver_user.cpp` file in the following manner:
-```
-... stuff ...
+
+```c
+
+#include "inodriver_user.h"
+
+int ledPin = 13;
+
 void user_setup() {
-   pinMode(13, OUTPUT);
+  pinMode(ledPin, OUTPUT);
 }
-... stuff ...
-int set_LED(int value) {
-   if (value>0)
-      digitalWrite(13, HIGH);
-   else
-      digitalWrite(13, LOW);
+
+void user_loop() {
+}
+// COMMAND: LED, FEAT: led
+int get_LED() {
    return 0;
 };
-... stuff ...
+
+int set_LED(int value) {
+   if (value>0)
+      digitalWrite(ledPin, HIGH);
+   else
+      digitalWrite(ledPin, LOW);
+   return 0;
+};
+
 ```
 
 
