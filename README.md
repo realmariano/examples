@@ -16,3 +16,8 @@ Then use a Qt interface to query the value in the arduino.
 Create an arduino driver, the corresponding sketch and upload it.
 Then use a Qt interface to query the value in the arduino periodically
 or plot it.
+
+#### arduino-qt-toogle-led
+
+Create an arduino driver, the corresponding sketch and upload it.
+The use a Qt interface with ON OFF buttons to set an arduino LED.
