@@ -11,6 +11,12 @@ Requirements
 
 - Install arduino-cli
   https://github.com/arduino/arduino-cli
+
+  _windows:_ 
+  Make sure you included the arduino-cli in your enviroment variables PATH.
+  From the command prompt:
+   * Check your installation by doing `arduino-cli`
+   * Install the AVR dependencies `arduino-cli core install arduino:avr`
   
 - Copy all the content of this folder to your computer
 
@@ -21,7 +27,7 @@ In the command line:
 
     pip install pyvisa-py
     pip install pyserial
-    lantz config core.visa_backend '@py'
+    lantz config core.visa_backend @py
 
 
 Step 1: Create arduino sketch template
@@ -64,7 +70,9 @@ command:
 
     python run.py
     
-    
+If you get a __json error__ read carfully the notes it states you should update the index using `arduino-cli core-update index`
+
+
 Step 4 (optional): Change something in the arduino sketch
 ---------------------------------------------------------
 
