@@ -16,6 +16,13 @@ Requirements
 - Install arduino-cli
   https://github.com/arduino/arduino-cli
 
+  _windows:_ 
+  Make sure you included the arduino-cli in your enviroment variables PATH.
+  From the command prompt:
+   * Check your installation by doing `arduino-cli`
+   * Install the AVR dependencies `arduino-cli core install arduino:avr`
+
+
 - (optionally) Install pyqtgraph if you want to run the run_plot example
   
 - Copy all the content of this folder to your computer
@@ -69,6 +76,8 @@ In the console, go to the folder containing this project and execute the followi
 command:
 
     python run_display.py
+
+If you get a __json error__ read carfully the notes it states you should update the index using `arduino-cli core-update index`
     
     
 Step 4 (optional): Change something in the arduino sketch
