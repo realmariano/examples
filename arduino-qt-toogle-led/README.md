@@ -12,6 +12,13 @@ Requirements
 - Install arduino-cli
   https://github.com/arduino/arduino-cli
   
+  _windows:_ 
+  Make sure you included the arduino-cli in your enviroment variables PATH.
+  From the command prompt:
+   * Check your installation by doing `arduino-cli`
+   * Install the AVR dependencies `arduino-cli core install arduino:avr`
+
+  
 - Copy all the content of this folder to your computer
 
 If you do not have the NI-VISA installed, you need to install `pyvisa-py`
@@ -21,7 +28,7 @@ In the command line:
 
     pip install pyvisa-py
     pip install pyserial
-    lantz config core.visa_backend '@py'
+    lantz config core.visa_backend @py
 
 
 Step 1: Create arduino sketch template
@@ -98,3 +105,5 @@ and the other to turn the LED off.
 <p align="center">
   <img width="460" src="https://raw.githubusercontent.com/SengerM/examples/master/arduino-qt-toogle-led/img/1.png">
 </p>
+
+If you get a __json error__ read carfully the notes it states you should update the index using `arduino-cli core-update index`
